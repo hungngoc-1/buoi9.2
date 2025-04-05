@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            text-align: center;
+            color: white;
+            display: grid;
+            grid-template-areas:
+            "home news contact about";
+            grid-template-columns: 1fr 1fr 1fr 1fr; 
+           
+        }
+        .home {
+            grid-area:home;
+         height: 50px;
+         background-color: black;
+        }
+        .news {
+            grid-area:news;
+            height:  50px;
+            background-color: black;
+        }
+        .contact {
+            grid-area:contact;
+            height:  50px;
+            background-color: black;
+        }
+        .about {
+            grid-area:about;
+            height: 50px;
+            background-color: black;
+        }
+        @media (max-width: 600px) {
+            .container {
+                grid-template-areas:
+                "home"
+                "news"
+                "contact"
+                "about";
+                grid-template-columns: 1fr; /* 1 cột */
+                grid-template-rows: auto; /* Tự động điều chỉnh chiều cao */
+              
+            }
+        }
+       
+      
+                
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="home">Home</div>
+        <div class="news">News</div>
+        <div class="contact">Contact</div>
+        <div class="about">About</div>
+        </div>
+</body>
+</html>
